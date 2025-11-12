@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfogon</title>
+    <link rel="stylesheet" href="css/alfogon.css">
+</head>
+<body>
+    <header class="header">
+        601836474839    info@alfogon.com
+    </header>
+    
+    <nav class="contenedor">
+        <li class="nav-item">
+            <a href="#inicio" class="nav-link active" data-page="inicio">
+                <p class="p">inicio</p>
+                <div class="active-indicator"></div>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="#menu" class="nav-link" data-page="menu">
+                <p class="p">menu</p>
+                <div class="active-indicator"></div>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="#qa" class="nav-link" data-page="qa">
+                <p class="p">QA</p>
+                <div class="active-indicator"></div>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="#calificaciones" class="nav-link" data-page="calificaciones">
+                <p class="p">calificaciones</p>
+                <div class="active-indicator"></div>
+            </a>
+        </li>
+    </nav>
+
+    <div id="inicio" class="page-content active">
+        <div class="carrusel-container">
+            <div class="carrusel" id="carrusel"></div>
+            <div class="barra-progreso-container">
+                <div class="barra-progreso" id="progreso"></div>
+            </div>
+        </div>
+        <div class="contenedorR">
+            <p>
+                /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+            </p>
+        </div>
+        
+        <!-- NUEVA SECCIÓN CON FONDO DIFUMINADO -->
+        <div class="seccion-bienvenida">
+            <img src="img/azado.png" width="400px">
+            <div class="contenido-bienvenida">
+                <h2 class="titulo-bienvenida">¡SIGA, PUES!</h2>
+                <p class="texto-bienvenida">
+                    ¡Bienvenidos a ALFOGÓN restaurante! Aquí, cada plato es una experiencia única. Nuestras carnes son jugosas, cocinadas a la perfección, y las sopas, reconfortantes y llenas de sabor. He creado este espacio para los amantes de la buena comida. ¡Los espero para que prueben lo mejor de mi cocina!
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="menu" class="page-content">
+        <div style="padding: 40px 20px; max-width: 1200px; margin: 0 auto;">
+            <h2 class="page-title">Nuestro Menú</h2>
+            <p class="page-text">
+                Explora nuestra exquisita selección de platos preparados con los mejores 
+                ingredientes y técnicas culinarias tradicionales.
+            </p>
+        </div>
+    </div>
+
+    <div id="qa" class="page-content">
+        <div style="padding: 40px 20px; max-width: 1200px; margin: 0 auto;">
+            <h2 class="page-title">Preguntas Frecuentes</h2>
+            <p class="page-text">
+                Encuentra respuestas a las preguntas más comunes sobre nuestros servicios, 
+                reservas y políticas.
+            </p>
+        </div>
+    </div>
+
+    <div id="calificaciones" class="page-content">
+        <div style="padding: 40px 20px; max-width: 1200px; margin: 0 auto;">
+            <h2 class="page-title">Calificaciones y Reseñas</h2>
+            <p class="page-text">
+                Descubre lo que nuestros clientes dicen sobre su experiencia en Alfogon. 
+                Tu opinión es muy importante para nosotros.
+            </p>
+        </div>
+    </div>
+
+    <script src="carrusel.js"></script>
+    <script src="navegacion.js"></script>
+</body>
+</html>
