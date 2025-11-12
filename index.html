@@ -38,6 +38,7 @@
         </li>
     </nav>
 
+    <!-- PÁGINA INICIO -->
     <div id="inicio" class="page-content active">
         <div class="carrusel-container">
             <div class="carrusel" id="carrusel"></div>
@@ -45,15 +46,14 @@
                 <div class="barra-progreso" id="progreso"></div>
             </div>
         </div>
+        
         <div class="contenedorR">
-            <p>
-                /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
-            </p>
+            <p>/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\</p>
         </div>
         
-        <!-- NUEVA SECCIÓN CON FONDO DIFUMINADO -->
+        <!-- SECCIÓN BIENVENIDA -->
         <div class="seccion-bienvenida">
-            <img src="img/azado.png" width="400px">
+            <img src="img/azado.png" alt="Azado Alfogon" class="img-azado">
             <div class="contenido-bienvenida">
                 <h2 class="titulo-bienvenida">¡SIGA, PUES!</h2>
                 <p class="texto-bienvenida">
@@ -63,37 +63,85 @@
         </div>
     </div>
 
+    <!-- PÁGINA MENÚ -->
     <div id="menu" class="page-content">
-        <div style="padding: 40px 20px; max-width: 1200px; margin: 0 auto;">
-            <h2 class="page-title">Nuestro Menú</h2>
-            <p class="page-text">
-                Explora nuestra exquisita selección de platos preparados con los mejores 
-                ingredientes y técnicas culinarias tradicionales.
-            </p>
-        </div>
+        <!-- El contenido del menú se cargará dinámicamente aquí -->
     </div>
 
+    <!-- PÁGINA QA -->
     <div id="qa" class="page-content">
-        <div style="padding: 40px 20px; max-width: 1200px; margin: 0 auto;">
+        <div class="page-container">
             <h2 class="page-title">Preguntas Frecuentes</h2>
-            <p class="page-text">
-                Encuentra respuestas a las preguntas más comunes sobre nuestros servicios, 
-                reservas y políticas.
-            </p>
+            <div class="qa-content">
+                <div class="pregunta-item">
+                    <h3>¿Cuáles son sus horarios de atención?</h3>
+                    <p>Atendemos de lunes a domingo de 7:00 AM a 10:00 PM.</p>
+                </div>
+                <div class="pregunta-item">
+                    <h3>¿Hacen domicilios?</h3>
+                    <p>Sí, realizamos domicilios en toda el área metropolitana. El costo del domicilio depende de la zona.</p>
+                </div>
+                <div class="pregunta-item">
+                    <h3>¿Aceptan pagos con tarjeta?</h3>
+                    <p>Sí, aceptamos todas las tarjetas crédito y débito, además de efectivo y transferencias.</p>
+                </div>
+                <div class="pregunta-item">
+                    <h3>¿Tienen opciones vegetarianas?</h3>
+                    <p>Sí, contamos con varias opciones vegetarianas en nuestro menú. Consulta con nuestro personal.</p>
+                </div>
+            </div>
         </div>
     </div>
 
+    <!-- PÁGINA CALIFICACIONES -->
     <div id="calificaciones" class="page-content">
-        <div style="padding: 40px 20px; max-width: 1200px; margin: 0 auto;">
+        <div class="page-container">
             <h2 class="page-title">Calificaciones y Reseñas</h2>
-            <p class="page-text">
-                Descubre lo que nuestros clientes dicen sobre su experiencia en Alfogon. 
-                Tu opinión es muy importante para nosotros.
-            </p>
+            <div class="reseñas-content">
+                <div class="reseña-item">
+                    <div class="reseña-header">
+                        <span class="reseña-autor">Carlos M.</span>
+                        <span class="reseña-rating">★★★★★</span>
+                    </div>
+                    <p class="reseña-texto">"La mejor bandeja paisa que he probado. Las carnes son de excelente calidad y el servicio es muy amable."</p>
+                </div>
+                <div class="reseña-item">
+                    <div class="reseña-header">
+                        <span class="reseña-autor">María L.</span>
+                        <span class="reseña-rating">★★★★☆</span>
+                    </div>
+                    <p class="reseña-texto">"El ajiaco es espectacular, muy cremoso y con todos los sabores tradicionales. Volveré pronto."</p>
+                </div>
+                <div class="reseña-item">
+                    <div class="reseña-header">
+                        <span class="reseña-autor">Javier R.</span>
+                        <span class="reseña-rating">★★★★★</span>
+                    </div>
+                    <p class="reseña-texto">"Excelente relación calidad-precio. El combo ejecutivo es perfecto para el almuerzo de mediodía."</p>
+                </div>
+            </div>
+            <div class="agregar-reseña">
+                <h3>Deja tu reseña</h3>
+                <form id="form-reseña">
+                    <input type="text" placeholder="Tu nombre" required>
+                    <select required>
+                        <option value="">Calificación</option>
+                        <option value="5">★★★★★</option>
+                        <option value="4">★★★★☆</option>
+                        <option value="3">★★★☆☆</option>
+                        <option value="2">★★☆☆☆</option>
+                        <option value="1">★☆☆☆☆</option>
+                    </select>
+                    <textarea placeholder="Tu reseña..." required></textarea>
+                    <button type="submit">Enviar Reseña</button>
+                </form>
+            </div>
         </div>
     </div>
 
+    <!-- SCRIPTS -->
     <script src="carrusel.js"></script>
     <script src="navegacion.js"></script>
+    <script src="menus/menu.js"></script>
 </body>
 </html>

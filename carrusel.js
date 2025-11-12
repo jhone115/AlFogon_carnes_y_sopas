@@ -6,7 +6,7 @@ const secciones = [
     texto: "Carnes & Sopas"
   },
   {
-    imagen: "img/carne.png", 
+    imagen: "img/fruta.png", 
     titulo: "",
     texto: "Sabor y jugosidad en cada corte, la carne perfecta."
   },

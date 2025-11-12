@@ -1,0 +1,159 @@
+{
+  "menus": {
+    "1": {
+      "id": 1,
+      "nombre": "Menú Principal",
+      "categoria": "principal",
+      "descripcion": "ALFOGON CARNES Y SOPAS",
+      "platos": [
+        {
+          "id": 101,
+          "nombre": "ANTIOQUEÑA",
+          "precio": 15000,
+          "descripcion": "Cazuela de frijol acompañada de huevo, arroz, arepa, aguacate y carne molida",
+          "categoria": "platos_tipicos"
+        },
+        {
+          "id": 102,
+          "nombre": "MONTAÑERA",
+          "precio": 18000,
+          "descripcion": "Cazuela de frijol acompañada de huevo, arroz blanco arepa blanca, chicharrón, carne molida y aguacate",
+          "categoria": "platos_tipicos"
+        },
+        {
+          "id": 103,
+          "nombre": "MINIPAISA",
+          "precio": 22000,
+          "descripcion": "Bandeja paisa con frijol antioqueño, chorizo, chicharrón, carne molida, huevo frito, arepa blanca, plátano maduro, arroz blanco y aguacate",
+          "categoria": "platos_tipicos"
+        },
+        {
+          "id": 104,
+          "nombre": "DOÑA PAISA BANDEJA PAISA GRANDE",
+          "precio": 30000,
+          "descripcion": "Frijol antioqueño, chorizo, chicharrón, carne molida, huevo frito, arepa blanca, tajadas de plátano, arroz blanco y aguacate",
+          "categoria": "platos_tipicos"
+        },
+        {
+          "id": 105,
+          "nombre": "AJIACO PEQUEÑO",
+          "precio": 16000,
+          "descripcion": "Tradicional ajiaco santafereño con pollo desmechado, arroz, aguacate, mazorca y crema de leche",
+          "categoria": "sopas"
+        },
+        {
+          "id": 106,
+          "nombre": "COMBO EJECUTIVO",
+          "precio": 25000,
+          "descripcion": "½ SOPA, ½ CARNE - Sopa del día, carne a la parrilla de 200 gr acompañada de papa a la francesa, arepa boyacense y ensalada",
+          "categoria": "combos"
+        },
+        {
+          "id": 201,
+          "nombre": "PECHUGA EN SALSA BBQ",
+          "precio": 16000,
+          "descripcion": "Sopa de arroz o arroz con leche, acompañado de arroz, alverja casera o poteca de ahuyama, papa sudada o tajada de plátano, ensalada del día (lechuga espinaca pepino cohombro)",
+          "categoria": "platos_dia"
+        },
+        {
+          "id": 202,
+          "nombre": "PATA DE RES GUISADA",
+          "precio": 16000,
+          "descripcion": "Sopa de arroz o arroz con leche, acompañado de arroz, alverja casera o poteca de ahuyama, papa sudada o tajada de plátano, ensalada del día (lechuga espinaca pepino cohombro)",
+          "categoria": "platos_dia"
+        },
+        {
+          "id": 203,
+          "nombre": "BISTEC ENCEBOLLADA",
+          "precio": 16000,
+          "descripcion": "Sopa de arroz o arroz con leche, acompañado de arroz, alverja casera o poteca de ahuyama, papa sudada o tajada de plátano, ensalada del día (lechuga espinaca pepino cohombro)",
+          "categoria": "platos_dia"
+        },
+        {
+          "id": 204,
+          "nombre": "ESTOFADO DE CERDO",
+          "precio": 16000,
+          "descripcion": "Sopa de arroz o arroz con leche, acompañado de arroz, alverja casera o poteca de ahuyama, papa sudada o tajada de plátano, ensalada del día (lechuga espinaca pepino cohombro)",
+          "categoria": "platos_dia"
+        },
+        {
+          "id": 301,
+          "nombre": "CHURRASCO 300 Grms",
+          "precio": 32000,
+          "descripcion": "Acompañadas de: Papas a la francesa, arepa boyacense, ensalada del día y chimichurri",
+          "categoria": "carnes"
+        },
+        {
+          "id": 302,
+          "nombre": "CHURRASQUITO 200 Grms",
+          "precio": 25000,
+          "descripcion": "Acompañadas de: Papas a la francesa, arepa boyacense, ensalada del día y chimichurri",
+          "categoria": "carnes"
+        },
+        {
+          "id": 303,
+          "nombre": "CARNE ASADA 300 Grms",
+          "precio": 26000,
+          "descripcion": "Acompañadas de: Papas a la francesa, arepa boyacense, ensalada del día y chimichurri",
+          "categoria": "carnes"
+        },
+        {
+          "id": 304,
+          "nombre": "CARNE ASADA 200 Grms",
+          "precio": 20000,
+          "descripcion": "Acompañadas de: Papas a la francesa, arepa boyacense, ensalada del día y chimichurri",
+          "categoria": "carnes"
+        },
+        {
+          "id": 305,
+          "nombre": "PUNTA DE ANCA 200 Grms",
+          "precio": 25000,
+          "descripcion": "Acompañadas de: Papas a la francesa, arepa boyacense, ensalada del día y chimichurri",
+          "categoria": "carnes"
+        },
+        {
+          "id": 306,
+          "nombre": "PUNTA DE ANCA 300 Grms",
+          "precio": 32000,
+          "descripcion": "Acompañadas de: Papas a la francesa, arepa boyacense, ensalada del día y chimichurri",
+          "categoria": "carnes"
+        }
+      ],
+      "categorias": [
+        {
+          "id": "platos_tipicos",
+          "nombre": "Platos Típicos",
+          "orden": 1
+        },
+        {
+          "id": "sopas",
+          "nombre": "Sopas",
+          "orden": 2
+        },
+        {
+          "id": "combos",
+          "nombre": "Combos",
+          "orden": 3
+        },
+        {
+          "id": "platos_dia",
+          "nombre": "Platos del Día",
+          "orden": 4
+        },
+        {
+          "id": "carnes",
+          "nombre": "Mis Carnes",
+          "orden": 5
+        }
+      ]
+    },
+    "2": {
+      "id": 2,
+      "nombre": "Menú Especial",
+      "categoria": "especial",
+      "descripcion": "Platos especiales del chef",
+      "platos": [
+      ]
+    }
+  }
+}

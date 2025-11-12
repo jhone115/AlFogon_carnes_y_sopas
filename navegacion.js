@@ -36,6 +36,16 @@ document.addEventListener('DOMContentLoaded', function() {
             if (contenedorR) contenedorR.style.display = 'none';
             if (seccionBienvenida) seccionBienvenida.style.display = 'none';
         }
+        
+        // Si la página es "menu", cargar el menú
+        if (pageId === 'menu') {
+            setTimeout(() => {
+                const menuEvent = new CustomEvent('pageChanged', { 
+                    detail: { page: 'menu' } 
+                });
+                document.dispatchEvent(menuEvent);
+            }, 100);
+        }
     }
     
     // Event listeners para los enlaces de navegación
@@ -55,6 +65,16 @@ document.addEventListener('DOMContentLoaded', function() {
         const hash = window.location.hash.substring(1) || 'inicio';
         changePage(hash);
     });
+    
+    // Manejar envío de formulario de reseñas
+    const formResena = document.getElementById('form-reseña');
+    if (formResena) {
+        formResena.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('¡Gracias por tu reseña! Será publicada después de ser revisada.');
+            this.reset();
+        });
+    }
     
     // Inicializar página basada en el hash de la URL
     const initialPage = window.location.hash.substring(1) || 'inicio';
