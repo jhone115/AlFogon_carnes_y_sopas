@@ -129,15 +129,15 @@ body {
 
 /* Fondo para cada sección */
 .seccion:nth-child(1) {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('img/llamas.png') center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('../img/llamas.png') center/cover;
 }
 
 .seccion:nth-child(2) {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('img/llamas.png') center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('../img/llamas.png') center/cover;
 }
 
 .seccion:nth-child(3) {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('img/llamas.png') center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('../img/llamas.png') center/cover;
 }
 
 .seccion::before {
