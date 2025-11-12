@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-/* HEADER RESPONSIVE */
+/* HEADER */
 .header {
     background-color: #7a0000;
     font-family: Arial, Helvetica, sans-serif;
@@ -20,7 +20,7 @@
     line-height: 1.2;
 }
 
-/* NAVEGACIÓN RESPONSIVE */
+/* NAVEGACIÓN */
 .contenedor {
     display: flex;
     justify-content: center;
@@ -98,10 +98,12 @@ body {
     overflow-x: hidden;
 }
 
-/* CARRUSEL RESPONSIVE - CORREGIDO */
+/* CARRUSEL */
 .carrusel-container {
     width: 100%;
-    height: clamp(300px, 60vh, 500px);
+    height: 70vh;
+    max-height: 500px;
+    min-height: 300px;
     overflow: hidden;
     position: relative;
     background: #000000;
@@ -110,7 +112,7 @@ body {
 
 .carrusel {
     display: flex;
-    transition: transform 0.5s ease;
+    transition: transform 0.5s ease-in-out;
     height: 100%;
     width: 100%;
 }
@@ -122,10 +124,20 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     flex-shrink: 0;
+}
+
+/* Fondo para cada sección */
+.seccion:nth-child(1) {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('img/llamas.png') center/cover;
+}
+
+.seccion:nth-child(2) {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('img/llamas.png') center/cover;
+}
+
+.seccion:nth-child(3) {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('img/llamas.png') center/cover;
 }
 
 .seccion::before {
@@ -138,9 +150,7 @@ body {
     background: 
         radial-gradient(circle at 50% 50%, #49010188, transparent 70%),
         radial-gradient(circle at 30% 40%, #ff330011, transparent 60%),
-        radial-gradient(circle at 70% 60%, #331f01ff, transparent 65%),
-        radial-gradient(ellipse at 20% 30%, #310000ff, transparent 40%),
-        radial-gradient(ellipse at 80% 70%, #f8210041, transparent 45%);
+        radial-gradient(circle at 70% 60%, #331f01ff, transparent 65%);
     background-blend-mode: overlay;
     z-index: 1;
 }
@@ -151,36 +161,29 @@ body {
     justify-content: space-between;
     width: 90%;
     max-width: 1200px;
-    padding: 0 20px;
-    height: 100%;
+    padding: 20px;
     position: relative;
     z-index: 2;
-    gap: 30px;
+    gap: 40px;
 }
 
 .imagen-seccion {
-    flex: 0 0 45%;
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    order: 2;
-    height: 100%;
-    padding: 20px 0;
+    padding: 20px;
 }
 
 .texto-seccion {
-    flex: 0 0 50%;
-    text-align: left;
-    order: 1;
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100%;
-    padding: 20px 0;
 }
 
 .texto-seccion h2 {
-    font-size: clamp(3rem, 10vw, 6rem);
+    font-size: 4.5rem;
     font-weight: 900;
     margin-bottom: 1rem;
     line-height: 0.9;
@@ -206,7 +209,6 @@ body {
         0 0 15px #ffffff,
         0 0 30px #ffffff,
         0 0 45px #ffffff,
-        0 0 60px #ffffff,
         3px 3px 6px rgba(0, 0, 0, 0.9);
     animation: brilloBlanco 3s ease-in-out infinite alternate;
 }
@@ -245,7 +247,7 @@ body {
 }
 
 .texto-seccion p {
-    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    font-size: 2rem;
     line-height: 1.3;
     margin-bottom: 0;
     color: #ffffff;
@@ -258,13 +260,32 @@ body {
 
 .imagen-seccion img {
     max-width: 100%;
-    max-height: 100%;
+    max-height: 250px;
     height: auto;
     object-fit: contain;
     filter: drop-shadow(0 0 20px rgba(255, 0, 0, 0.3));
 }
 
-/* SECCIÓN BIENVENIDA RESPONSIVE - CORREGIDA */
+/* BARRA DE PROGRESO */
+.barra-progreso-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    z-index: 3;
+}
+
+.barra-progreso {
+    height: 100%;
+    background: linear-gradient(90deg, #ff0000, #ff3333);
+    width: 0%;
+    transition: width 5s linear;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+/* SECCIÓN BIENVENIDA */
 #inicio {
     padding: 0 !important;
     max-width: 100% !important;
@@ -364,7 +385,7 @@ body {
     padding: 0 10px;
 }
 
-/* CONTENEDOR R RESPONSIVE - CORREGIDO */
+/* CONTENEDOR R */
 .contenedorR {
     font-family: Arial, Helvetica, sans-serif;
     padding: 12px 15px;
@@ -383,7 +404,7 @@ body {
     overflow: hidden;
 }
 
-/* CONTENIDO DE PÁGINAS - CORREGIDO */
+/* CONTENIDO DE PÁGINAS */
 .page-content {
     display: none;
     padding: clamp(25px, 5vw, 50px) clamp(15px, 3vw, 25px);
@@ -421,25 +442,6 @@ body {
     margin: 0 auto;
 }
 
-/* BARRA DE PROGRESO */
-.barra-progreso-container {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 5px;
-    background: rgba(255, 255, 255, 0.2);
-    z-index: 3;
-}
-
-.barra-progreso {
-    height: 100%;
-    background: linear-gradient(90deg, #ff0000, #ff3333);
-    width: 0%;
-    transition: width 5s linear;
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
-}
-
 /* FUENTE PERSONALIZADA */
 @font-face {
     font-family: 'alfogon';
@@ -449,7 +451,7 @@ body {
     font-display: swap;
 }
 
-/* MEDIA QUERIES MEJORADAS */
+/* RESPONSIVE PARA CARRUSEL */
 @media (max-width: 1024px) {
     .contenido {
         width: 95%;
@@ -458,15 +460,21 @@ body {
     }
     
     .texto-seccion h2 {
-        font-size: clamp(2.5rem, 9vw, 5rem);
+        font-size: 3.5rem;
     }
     
     .texto-seccion p {
-        font-size: clamp(1.3rem, 4vw, 2rem);
+        font-size: 1.8rem;
     }
 }
 
 @media (max-width: 768px) {
+    .carrusel-container {
+        height: 60vh;
+        max-height: 400px;
+        min-height: 250px;
+    }
+    
     .contenedor {
         margin-top: 55px;
         gap: 8px;
@@ -484,46 +492,31 @@ body {
     .contenido {
         flex-direction: column;
         text-align: center;
-        padding: 0 15px;
-        gap: 15px;
-        justify-content: center;
-    }
-    
-    .imagen-seccion,
-    .texto-seccion {
-        flex: 0 0 100%;
-        width: 100%;
-        order: 0;
-        padding: 10px 0;
+        gap: 20px;
+        padding: 15px;
     }
     
     .imagen-seccion {
         order: 2;
-        margin-bottom: 0;
-        height: auto;
+        padding: 10px;
     }
     
     .texto-seccion {
         order: 1;
         text-align: center;
-        margin-bottom: 0;
-        height: auto;
     }
     
     .texto-seccion h2 {
-        font-size: clamp(2.2rem, 11vw, 3.5rem);
-        line-height: 1;
+        font-size: 3rem;
         margin-bottom: 0.5rem;
     }
     
     .texto-seccion p {
-        font-size: clamp(1.2rem, 4.5vw, 1.8rem);
-        line-height: 1.2;
-        margin-bottom: 0;
+        font-size: 1.5rem;
     }
     
     .imagen-seccion img {
-        max-height: 180px;
+        max-height: 150px;
     }
     
     .seccion-bienvenida {
@@ -546,6 +539,12 @@ body {
 }
 
 @media (max-width: 480px) {
+    .carrusel-container {
+        height: 50vh;
+        max-height: 350px;
+        min-height: 200px;
+    }
+    
     .header {
         padding: 10px 0;
         font-size: clamp(14px, 3.5vw, 16px);
@@ -565,27 +564,22 @@ body {
         font-size: 13px;
     }
     
-    .carrusel-container {
-        height: clamp(250px, 50vh, 400px);
-    }
-    
     .contenido {
         padding: 0 10px;
-        gap: 10px;
+        gap: 15px;
     }
     
     .texto-seccion h2 {
-        font-size: clamp(1.8rem, 12vw, 2.8rem);
-        letter-spacing: 1px;
+        font-size: 2.2rem;
     }
     
     .texto-seccion p {
-        font-size: clamp(1rem, 4vw, 1.4rem);
+        font-size: 1.2rem;
         line-height: 1.3;
     }
     
     .imagen-seccion img {
-        max-height: 140px;
+        max-height: 120px;
     }
     
     .seccion-bienvenida {
@@ -645,5 +639,26 @@ body {
     
     .contenido-bienvenida img {
         width: clamp(120px, 30vw, 200px);
+    }
+}
+
+/* PREVENIR PROBLEMAS DE RENDERIZADO */
+img, video, canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+/* MEJORAS DE PERFORMANCE PARA MÓVILES */
+@media (max-width: 768px) {
+    .seccion::before {
+        background: 
+            radial-gradient(circle at 50% 50%, #49010166, transparent 60%),
+            radial-gradient(circle at 30% 40%, #ff330008, transparent 50%);
+    }
+    
+    .seccion-bienvenida::before {
+        background:
+            radial-gradient(circle at 50% 50%, #49010166, transparent 60%),
+            radial-gradient(circle at 30% 40%, #ff330008, transparent 50%);
     }
 }
