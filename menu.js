@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // Función principal para cargar el menú
 async function loadMenu() {
     try {
-        const response = await fetch('menusData.json');
+        const response = await fetch('menus/menusData.json');
         if (!response.ok) {
             throw new Error('No se pudo cargar el menú');
         }
