@@ -2,6 +2,9 @@
 document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('.nav-link');
     const pageContents = document.querySelectorAll('.page-content');
+    const carruselContainer = document.querySelector('.carrusel-container');
+    const contenedorR = document.querySelector('.contenedorR');
+    const seccionBienvenida = document.querySelector('.seccion-bienvenida');
     
     // Función para cambiar de página
     function changePage(pageId) {
@@ -23,12 +26,15 @@ document.addEventListener('DOMContentLoaded', function() {
             activePage.classList.add('active');
         }
         
-        // Ocultar/mostrar carrusel según la página
-        const carruselContainer = document.querySelector('.carrusel-container');
-        if (pageId === 'inicio' && carruselContainer) {
-            carruselContainer.style.display = 'block';
-        } else if (carruselContainer) {
-            carruselContainer.style.display = 'none';
+        // Mostrar/ocultar elementos específicos de la página de inicio
+        if (pageId === 'inicio') {
+            if (carruselContainer) carruselContainer.style.display = 'block';
+            if (contenedorR) contenedorR.style.display = 'block';
+            if (seccionBienvenida) seccionBienvenida.style.display = 'flex';
+        } else {
+            if (carruselContainer) carruselContainer.style.display = 'none';
+            if (contenedorR) contenedorR.style.display = 'none';
+            if (seccionBienvenida) seccionBienvenida.style.display = 'none';
         }
     }
     
@@ -53,4 +59,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Inicializar página basada en el hash de la URL
     const initialPage = window.location.hash.substring(1) || 'inicio';
     changePage(initialPage);
+    
+    // Asegurar que el carrusel se reinicie cuando se vuelva a la página de inicio
+    window.addEventListener('hashchange', function() {
+        const hash = window.location.hash.substring(1) || 'inicio';
+        if (hash === 'inicio' && typeof reiniciarCarruselAutomatico === 'function') {
+            setTimeout(() => {
+                reiniciarCarruselAutomatico();
+            }, 100);
+        }
+    });
 });
