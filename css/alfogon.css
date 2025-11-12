@@ -10,24 +10,26 @@
     font-family: Arial, Helvetica, sans-serif;
     color: #ffffff;
     width: 100%;
-    padding: 10px 0;
+    padding: 12px 0;
     text-align: center;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
-    font-size: clamp(14px, 4vw, 24px);
+    font-size: clamp(16px, 4vw, 22px);
+    line-height: 1.2;
 }
 
 /* NAVEGACIÓN RESPONSIVE */
 .contenedor {
     display: flex;
     justify-content: center;
-    gap: 15px;
-    padding: 10px;
+    gap: clamp(10px, 3vw, 20px);
+    padding: 12px 10px;
     background-color: #f0f0f0;
     position: relative;
-    margin-top: 50px;
+    margin-top: 60px;
+    flex-wrap: wrap;
 }
 
 .nav-item {
@@ -38,9 +40,10 @@
 .nav-link {
     text-decoration: none;
     display: block;
-    padding: 10px 15px;
+    padding: clamp(8px, 2vw, 12px) clamp(12px, 3vw, 20px);
     border-radius: 5px;
     transition: all 0.3s ease;
+    min-width: max-content;
 }
 
 .nav-link.active {
@@ -67,10 +70,11 @@
     font-family: Arial, Helvetica, sans-serif;
     color: #410000;
     text-align: center;
-    font-size: clamp(14px, 3vw, 18px);
-    font-weight: 300;
+    font-size: clamp(16px, 3.5vw, 20px);
+    font-weight: 400;
     margin: 0;
     transition: color 0.3s ease;
+    line-height: 1.2;
 }
 
 .nav-link:hover .p {
@@ -79,7 +83,7 @@
 
 .nav-link.active .p {
     color: #7a0000;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 /* CUERPO PRINCIPAL */
@@ -90,17 +94,18 @@ body {
     padding: 0;
     background: #ffffff;
     margin-top: 0;
-    font-size: clamp(14px, 4vw, 18px);
+    font-size: clamp(16px, 4vw, 20px);
     overflow-x: hidden;
 }
 
-/* CARRUSEL RESPONSIVE */
+/* CARRUSEL RESPONSIVE - CORREGIDO */
 .carrusel-container {
     width: 100%;
-    height: clamp(250px, 50vh, 400px);
+    height: clamp(300px, 60vh, 500px);
     overflow: hidden;
     position: relative;
     background: #000000;
+    margin: 0;
 }
 
 .carrusel {
@@ -119,6 +124,7 @@ body {
     position: relative;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     flex-shrink: 0;
 }
 
@@ -143,12 +149,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 95%;
+    width: 90%;
     max-width: 1200px;
     padding: 0 20px;
-    height: auto;
+    height: 100%;
     position: relative;
     z-index: 2;
+    gap: 30px;
 }
 
 .imagen-seccion {
@@ -157,20 +164,27 @@ body {
     justify-content: center;
     align-items: center;
     order: 2;
+    height: 100%;
+    padding: 20px 0;
 }
 
 .texto-seccion {
     flex: 0 0 50%;
     text-align: left;
     order: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding: 20px 0;
 }
 
 .texto-seccion h2 {
-    font-size: clamp(2.5rem, 8vw, 4rem);
-    font-weight: 700;
+    font-size: clamp(3rem, 10vw, 6rem);
+    font-weight: 900;
     margin-bottom: 1rem;
-    line-height: 1;
-    letter-spacing: 2px;
+    line-height: 0.9;
+    letter-spacing: 3px;
 }
 
 .palabra-al {
@@ -231,25 +245,26 @@ body {
 }
 
 .texto-seccion p {
-    font-size: clamp(1.2rem, 4vw, 2rem);
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
     line-height: 1.3;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0;
     color: #ffffff;
     text-shadow: 
         2px 2px 4px rgba(0, 0, 0, 0.8),
         0 0 10px rgba(255, 255, 255, 0.5);
-    font-weight: 400;
+    font-weight: 500;
     letter-spacing: 1px;
 }
 
 .imagen-seccion img {
     max-width: 100%;
-    max-height: clamp(120px, 25vh, 200px);
+    max-height: 100%;
+    height: auto;
     object-fit: contain;
     filter: drop-shadow(0 0 20px rgba(255, 0, 0, 0.3));
 }
 
-/* SECCIÓN BIENVENIDA RESPONSIVE */
+/* SECCIÓN BIENVENIDA RESPONSIVE - CORREGIDA */
 #inicio {
     padding: 0 !important;
     max-width: 100% !important;
@@ -258,11 +273,11 @@ body {
 .seccion-bienvenida {
     position: relative;
     background: #000000;
-    min-height: clamp(300px, 40vh, 500px);
+    min-height: clamp(350px, 50vh, 600px);
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: clamp(20px, 5vw, 40px) clamp(15px, 3vw, 30px);
+    padding: clamp(30px, 6vw, 60px) clamp(20px, 4vw, 40px);
     overflow: hidden;
 }
 
@@ -311,59 +326,67 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: clamp(15px, 3vw, 25px);
+    gap: clamp(20px, 4vw, 35px);
 }
 
 .contenido-bienvenida img {
-    width: clamp(150px, 40vw, 300px);
+    width: clamp(180px, 45vw, 350px);
     height: auto;
     max-width: 100%;
+    filter: drop-shadow(0 0 15px rgba(255, 0, 0, 0.4));
 }
 
 .titulo-bienvenida {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: clamp(1.5rem, 6vw, 2.5rem);
-    line-height: 1.3;
+    font-size: clamp(2rem, 7vw, 3.5rem);
+    line-height: 1.2;
     margin-bottom: 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    text-shadow: 
+        2px 2px 6px rgba(0, 0, 0, 0.9),
+        0 0 20px rgba(255, 255, 255, 0.4);
     font-weight: 700;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
     color: #ffebeb;
 }
 
 .texto-bienvenida {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: clamp(0.9rem, 3vw, 1.1rem);
-    line-height: 1.5;
+    font-size: clamp(1rem, 3.5vw, 1.3rem);
+    line-height: 1.6;
     margin-bottom: 0;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    text-shadow: 
+        1px 1px 3px rgba(0, 0, 0, 0.8);
     font-weight: 400;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.5px;
     color: #ffebeb;
-    max-width: 100%;
+    max-width: 800px;
+    padding: 0 10px;
 }
 
-/* CONTENEDOR R RESPONSIVE */
-.contenedorR{
+/* CONTENEDOR R RESPONSIVE - CORREGIDO */
+.contenedorR {
     font-family: Arial, Helvetica, sans-serif;
-    padding: 8px 10px;
+    padding: 12px 15px;
     color: #ffffff;
     background-color: #7a0000;
     font-weight: bold;
-    font-size: clamp(12px, 3vw, 16px);
-    overflow-x: auto;
+    font-size: clamp(14px, 3.5vw, 18px);
+    overflow-x: hidden;
+    text-align: center;
+    line-height: 1.3;
 }
 
 .contenedorR p {
     margin: 0;
     white-space: nowrap;
+    overflow: hidden;
 }
 
-/* CONTENIDO DE PÁGINAS */
+/* CONTENIDO DE PÁGINAS - CORREGIDO */
 .page-content {
     display: none;
-    padding: clamp(20px, 4vw, 40px) clamp(15px, 3vw, 20px);
+    padding: clamp(25px, 5vw, 50px) clamp(15px, 3vw, 25px);
     max-width: 1200px;
     margin: 0 auto;
     width: 95%;
@@ -381,18 +404,21 @@ body {
 
 .page-title {
     color: #7a0000;
-    font-size: clamp(1.5rem, 5vw, 2.5rem);
-    margin-bottom: 1.5rem;
+    font-size: clamp(2rem, 6vw, 3rem);
+    margin-bottom: 2rem;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.2;
 }
 
 .page-text {
-    font-size: clamp(1rem, 3vw, 1.2rem);
-    line-height: 1.6;
+    font-size: clamp(1.1rem, 3.5vw, 1.4rem);
+    line-height: 1.7;
     color: #410000;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 /* BARRA DE PROGRESO */
@@ -401,7 +427,7 @@ body {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 4px;
+    height: 5px;
     background: rgba(255, 255, 255, 0.2);
     z-index: 3;
 }
@@ -423,22 +449,44 @@ body {
     font-display: swap;
 }
 
-/* MEDIA QUERIES PARA MÓVILES */
+/* MEDIA QUERIES MEJORADAS */
+@media (max-width: 1024px) {
+    .contenido {
+        width: 95%;
+        padding: 0 15px;
+        gap: 20px;
+    }
+    
+    .texto-seccion h2 {
+        font-size: clamp(2.5rem, 9vw, 5rem);
+    }
+    
+    .texto-seccion p {
+        font-size: clamp(1.3rem, 4vw, 2rem);
+    }
+}
+
 @media (max-width: 768px) {
     .contenedor {
-        gap: 10px;
-        padding: 8px;
-        margin-top: 45px;
+        margin-top: 55px;
+        gap: 8px;
+        padding: 10px 8px;
     }
     
     .nav-link {
         padding: 8px 12px;
     }
     
+    .p {
+        font-size: clamp(14px, 3vw, 16px);
+    }
+    
     .contenido {
         flex-direction: column;
         text-align: center;
         padding: 0 15px;
+        gap: 15px;
+        justify-content: center;
     }
     
     .imagen-seccion,
@@ -446,42 +494,67 @@ body {
         flex: 0 0 100%;
         width: 100%;
         order: 0;
+        padding: 10px 0;
     }
     
     .imagen-seccion {
         order: 2;
-        margin-bottom: 15px;
+        margin-bottom: 0;
+        height: auto;
     }
     
     .texto-seccion {
         order: 1;
         text-align: center;
-        margin-bottom: 15px;
+        margin-bottom: 0;
+        height: auto;
     }
     
     .texto-seccion h2 {
-        font-size: clamp(2rem, 10vw, 3rem);
+        font-size: clamp(2.2rem, 11vw, 3.5rem);
+        line-height: 1;
+        margin-bottom: 0.5rem;
     }
     
     .texto-seccion p {
-        font-size: clamp(1rem, 4vw, 1.5rem);
+        font-size: clamp(1.2rem, 4.5vw, 1.8rem);
+        line-height: 1.2;
+        margin-bottom: 0;
+    }
+    
+    .imagen-seccion img {
+        max-height: 180px;
     }
     
     .seccion-bienvenida {
-        padding: 30px 15px;
+        padding: 25px 15px;
+        min-height: clamp(300px, 45vh, 500px);
+    }
+    
+    .contenido-bienvenida {
+        gap: 20px;
+    }
+    
+    .titulo-bienvenida {
+        font-size: clamp(1.8rem, 6vw, 2.8rem);
+    }
+    
+    .texto-bienvenida {
+        font-size: clamp(0.9rem, 3.2vw, 1.1rem);
+        line-height: 1.5;
     }
 }
 
 @media (max-width: 480px) {
     .header {
-        padding: 8px 0;
-        font-size: clamp(12px, 3.5vw, 16px);
+        padding: 10px 0;
+        font-size: clamp(14px, 3.5vw, 16px);
     }
     
     .contenedor {
-        margin-top: 40px;
-        flex-wrap: wrap;
+        margin-top: 50px;
         gap: 5px;
+        padding: 8px 5px;
     }
     
     .nav-link {
@@ -489,36 +562,88 @@ body {
     }
     
     .p {
-        font-size: 12px;
+        font-size: 13px;
     }
     
     .carrusel-container {
-        height: 200px;
+        height: clamp(250px, 50vh, 400px);
     }
     
     .contenido {
         padding: 0 10px;
+        gap: 10px;
     }
     
     .texto-seccion h2 {
-        font-size: clamp(1.8rem, 11vw, 2.5rem);
+        font-size: clamp(1.8rem, 12vw, 2.8rem);
+        letter-spacing: 1px;
     }
     
     .texto-seccion p {
-        font-size: clamp(0.9rem, 4vw, 1.2rem);
+        font-size: clamp(1rem, 4vw, 1.4rem);
+        line-height: 1.3;
     }
     
     .imagen-seccion img {
-        max-height: 120px;
+        max-height: 140px;
     }
     
     .seccion-bienvenida {
-        min-height: 250px;
+        min-height: clamp(280px, 40vh, 400px);
         padding: 20px 10px;
     }
     
+    .contenido-bienvenida img {
+        width: clamp(140px, 40vw, 250px);
+    }
+    
+    .titulo-bienvenida {
+        font-size: clamp(1.5rem, 7vw, 2.2rem);
+    }
+    
+    .texto-bienvenida {
+        font-size: clamp(0.8rem, 3vw, 1rem);
+        line-height: 1.4;
+    }
+    
     .contenedorR {
-        padding: 6px 8px;
-        font-size: 11px;
+        padding: 10px 12px;
+        font-size: clamp(12px, 3vw, 14px);
+    }
+    
+    .page-content {
+        padding: 20px 10px;
+    }
+    
+    .page-title {
+        font-size: clamp(1.5rem, 7vw, 2.2rem);
+        margin-bottom: 1.5rem;
+    }
+    
+    .page-text {
+        font-size: clamp(1rem, 3.2vw, 1.2rem);
+        line-height: 1.6;
+    }
+}
+
+/* ORIENTACIÓN HORIZONTAL EN MÓVILES */
+@media (max-height: 500px) and (orientation: landscape) {
+    .carrusel-container {
+        height: 80vh;
+    }
+    
+    .seccion-bienvenida {
+        min-height: 80vh;
+        padding: 20px 15px;
+    }
+    
+    .contenido-bienvenida {
+        flex-direction: row;
+        text-align: left;
+        gap: 25px;
+    }
+    
+    .contenido-bienvenida img {
+        width: clamp(120px, 30vw, 200px);
     }
 }
